@@ -1,0 +1,12 @@
+
+  <label class="item item-input item-select">
+    <div class="input-label item-stacked-label">
+    {{ngLabel}}
+    </div>
+    <select 
+    	ng-init="ngBind.value" 
+    	ng-model="ngBind.value" 
+    	ng-options="i.value as i.label for i in ngBind.options">
+      	<option value="" ng-if="ngBind.value == ''">Selecciona</option>
+    </select>
+  </label> 

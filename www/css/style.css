@@ -1,0 +1,15 @@
+/* Empty. Add your own CSS if you like */
+.setecmaintitle {
+	font-size: 1.5em;
+}
+.setecsub {
+	
+	border-radius:5px;
+
+	color: #FFF!important;
+	padding: 1px 10px;
+	background-color: #444;
+}
+div.main-card > div > p > span {
+	font-weight: bold;
+}

@@ -1,0 +1,810 @@
+<ion-view view-title="LEVANTAMIENTO TICS">
+<ion-content class"padding">
+<div class="card main-card" id="1">
+	<div class="item item-text-wrap item-stable">
+		<p><strong class="setecmaintitle">Datos generales</strong></p>
+		<hr color="#c9c9c9" />
+		<p class="setecsub">Levantamiento de TIC's</p>
+		<p>Formato: <span>FOR-LEV-TIC-2014			</span></p>
+		<p>No. de Registro: <span>301930001_PJ-21</span></p>
+		<hr color="#c9c9c9" />
+		<p class="setecsub">Institución o Unidad que ocupa el inmueble: <br/><span>Poder Judicial de la Defensoria del Estado de Xalapa</span></p>
+		<hr color="#c9c9c9" />
+		<p class="setecsub">Estado: <span>Veracruz</span>, Municipio: <span>Xalapa</span></p>
+		<hr color="#c9c9c9" />	
+		<p class="setecsub">Dirección</p>
+		<p>Calle: <span>Calle</span></p>
+		<p>Colonia: <span>Colonia</span></p>
+		<p>Localidad: <span>Localidad</span></p>
+		<p>No. ext.: <span>1</span></p>
+		<p>No. int.: <span>-</span></p>
+		<p>C.P.: <span>550000</span></p>
+		<hr color="#c9c9c9" />
+		<p class="setecsub">Georeferencia</p>
+		<p>Lat: <span>46'03'50</span></p>
+		<p>Lng.: <span>12'10'06</span></p>
+	</div>	  
+</div>
+<!-- t21 -->
+<div class="card" id="2">
+
+
+	<div class="item item-text-wrap item-positive">
+		2 Equipo de Cómputo Personal y Periféricos
+	</div>
+	<div class="item item-text-wrap item-assertive">
+		Información proporcionada en sitio por una persona de TIC's y personal de la UCOL
+	</div>
+</div>
+<!--/t2 -->
+<!-- t2.1 -->
+<div class="card" id="2_1">
+	<div class="item item-text-wrap item-stable">
+		2.1 Equipo de Cómputo Personal
+	</div>	
+	<label class="item item-input item-stacked-label">
+		<span class="input-label">Cantidad de Personal TI en sitio:</span>
+		<input type="tel" placeholder="0">
+	</label>
+	<div class="list">		
+		<combo-item ng-model="lev.combo1" ng-label="'El Equipo de Cómputo se sustituye cada:'"></combo-item>
+	</div>
+	<div class="list">		
+		<combo-item ng-model="lev.combo2" ng-label="'Año en que se hizo la sustitución mas reciente de Equipo de Cómputo:'"></combo-item>
+	</div>
+	<label class="item item-input item-stacked-label">
+		<span class="input-label">Cantidad de Usuarios (Personal Sustantivo) sin Equipo de Cómputo:</span>
+		<input type="tel" placeholder="0">
+	</label>
+	<label class="item item-input item-stacked-label ">
+		<span class="input-label">Cantidad de Computadoras de Escritorio de la Institución en este inmueble:</span>
+		<input type="tel" placeholder="0">
+	</label>
+	<label class="item item-input item-stacked-label ()GHz">
+		<span class="input-label">Tipo de Procesador de la mayoría de las C. de Escritorio ()GB:</span>
+		<input type="tel" placeholder="0">
+	</label>
+	<label class="item item-input item-stacked-label ">
+		<span class="input-label">Memoria RAM de la mayoría de las C. de Escritorio (GB):</span>
+		<input type="tel" placeholder="0">
+	</label>
+	<label class="item item-input item-stacked-label ">
+		<span class="input-label">Capacidad de Disco Duro de la mayoría de las C. de Escritorio (GB):</span>
+		<input type="tel" placeholder="0">
+	</label>
+	
+	<label class="item item-input item-stacked-label ">
+		<span class="input-label">Cantidad de Laptops de la Institución en este inmueble:</span>
+		<input type="tel" placeholder="0">
+	</label>
+	<label class="item item-input item-stacked-label ()GHz">
+		<span class="input-label">Tipo de Procesador de la mayoría de las Laptops:</span>
+		<input type="text" placeholder="0">
+	</label>
+	<label class="item item-input item-stacked-label ()GHz">
+		<span class="input-label">Tipo de Procesador de la mayoría de las Laptops:</span>
+		<input type="text" placeholder="0">
+	</label>
+	<label class="item item-input item-stacked-label ()GHz">
+		<span class="input-label">Memoria RAM de la mayoría de las Laptops:</span>
+		<input type="text" placeholder="0">
+	</label>
+	<!-- SO instalados +1 -->
+	<!-- soft. oficina +1 -->
+	<!-- soft. comercial +1 -->
+	<label class="item item-input item-stacked-label ">
+		<span class="input-label">Cantidad de Laptops de la Institución en este inmueble:</span>
+		<input type="tel" placeholder="0">
+	</label>
+	<label class="item item-input item-stacked-label ">
+		<span class="input-label">Cantidad de equipos MAC:</span>
+		<input type="tel" placeholder="0">
+	</label>
+</div>
+<!--/t2.1 -->
+
+<!-- t2.2 -->
+<div class="card">
+	<div class="item item-text-wrap item-positive">
+		2.2 Periféricos
+	</div>
+</div>
+
+<div class="card" id="2_2">
+	
+	<label class="item item-input item-stacked-label ">
+		<span class="input-label">Cantidad de impresoras láser B/N:</span>
+		<input type="tel" placeholder="0">
+	</label>
+	
+	<toggle-si-no ng-status="lev.capacidadRedImpLsrBN" ng-value="lev.capacidadRedImpLsrBNValue" ng-label="'Capacidad de Red'" ng-sublabel="'Cuantas'"></toggle-si-no>
+
+	<div class="item item-divider"></div>
+	<label class="item item-input item-stacked-label ">
+		<span class="input-label">Cantidad de impresoras láser color:</span>
+		<input type="tel" placeholder="0">
+	</label>
+	<toggle-si-no ng-status="lev.capacidadRedImpLsrClr" ng-value="lev.capacidadRedImpLsrClrValue" ng-label="'Capacidad de Red'" ng-sublabel="'Cuantas'"></toggle-si-no>
+	<div class="item item-divider"></div>
+	<label class="item item-input item-stacked-label ">
+		<span class="input-label">Cantidad de impresoras láser color:</span>
+		<input type="tel" placeholder="0">
+	</label>
+	<label class="item item-input item-stacked-label ">
+		<span class="input-label">Cantidad de scanners/Digitalizadores:</span>
+		<input type="tel" placeholder="0">
+	</label>
+	<label class="item item-input item-stacked-label ">
+		<span class="input-label">Cantidad de no-breaks:</span>
+		<input type="tel" placeholder="0">
+	</label>
+	<label class="item item-input item-stacked-label ">
+		<span class="input-label">Cantidad de no-breaks:</span>
+		<input type="tel" placeholder="0">
+	</label>
+	<label class="item item-input item-stacked-label ">
+		<span class="input-label">Cantidad de lectores de codigo de barras:</span>
+		<input type="tel" placeholder="0">
+	</label>
+	<label class="item item-input item-stacked-label ">
+		<span class="input-label">Cantidad de multifuncionales:</span>
+		<input type="tel" placeholder="0">
+	</label>
+
+	<toggle-si-no ng-status="lev.capacidadRedMulti" ng-value="lev.capacidadRedMultiValue" ng-label="'Capacidad de Red'" ng-sublabel="'Cuantos'"></toggle-si-no>
+
+	<div class="item item-divider"></div>
+	<label class="item item-input item-stacked-label ">
+		<span class="input-label">Cantidad de kioskos electrónicos de información:</span>
+		<input type="tel" placeholder="0">
+	</label>
+	<div class="list">		
+		<combo-item ng-model="lev.comboTelefonicaFija" ng-label="'Telefonía fija:'"></combo-item>
+	</div>
+	<label class="item item-input item-stacked-label ">
+		<span class="input-label">Cantidad de lineas PBX:</span>
+		<input type="tel" placeholder="0">
+	</label>
+	<label class="item item-input item-stacked-label ">
+		<span class="input-label">Cantidad de lineas VoIP:</span>
+		<input type="tel" placeholder="0">
+	</label>
+	<label class="item item-input item-stacked-label ">
+		<span class="input-label">Cantidad de extensiones PBX:</span>
+		<input type="tel" placeholder="0">
+	</label>
+	<label class="item item-input item-stacked-label ">
+		<span class="input-label">Cantidad de extensiones VoIP:</span>
+		<input type="tel" placeholder="0">
+	</label>
+	<div class="list">		
+		<combo-item ng-model="lev.comboSistemaRadioFrecuencia" ng-label="'Sistema de Radio Frecuencia:'"></combo-item>
+	</div>
+	<ion-toggle toggle-class="toggle-calm">Se cuenta con equipo de radiocomunicación</ion-toggle>
+	<label class="item item-input item-stacked-label ">
+		<span class="input-label">Capacidad (mts):</span>
+		<input type="tel" placeholder="0">
+	</label>
+</div>
+
+<!--/t2.2 -->
+
+<!-- t2.3 -->
+<div class="card">
+	<div class="item item-text-wrap item-positive">
+		2.3 Bodega de Evidencias
+	</div>
+</div>
+
+<div class="card" id="2_3">
+	
+	<label class="item item-input item-stacked-label ">
+		<span class="input-label">Cantidad de equipo de computo personal (PC o Laptop):</span>
+		<input type="tel" placeholder="0">
+	</label>
+	<label class="item item-input item-stacked-label ">
+		<span class="input-label">Cantidad de impresoras láser color:</span>
+		<input type="tel" placeholder="0">
+	</label>
+	<label class="item item-input item-stacked-label ">
+		<span class="input-label">Cantidad de scanners:</span>
+		<input type="tel" placeholder="0">
+	</label>
+	<label class="item item-input item-stacked-label ">
+		<span class="input-label">Cantidad de multifuncionales:</span>
+		<input type="tel" placeholder="0">
+	</label>
+	<label class="item item-input item-stacked-label ">
+		<span class="input-label">Cantidad de Teléfonos:</span>
+		<input type="tel" placeholder="0">
+	</label>
+</div>
+
+<!--/t2.3 -->
+
+<!-- t2.4 -->
+<div class="card">
+	<div class="item item-text-wrap item-positive">
+		2.4 Servicios Periciales
+	</div>
+</div>
+
+<div class="card" id="2_4">
+	
+	<label class="item item-input item-stacked-label ">
+		<span class="input-label">Cantidad de equipo de computo personal (PC o Laptop):</span>
+		<input type="tel" placeholder="0">
+	</label>
+	<label class="item item-input item-stacked-label ">
+		<span class="input-label">Cantidad de impresoras:</span>
+		<input type="tel" placeholder="0">
+	</label>
+	<label class="item item-input item-stacked-label ">
+		<span class="input-label">Cantidad de scanners:</span>
+		<input type="tel" placeholder="0">
+	</label>
+	<label class="item item-input item-stacked-label ">
+		<span class="input-label">Cantidad de multifuncionales:</span>
+		<input type="tel" placeholder="0">
+	</label>
+	<label class="item item-input item-stacked-label ">
+		<span class="input-label">Cantidad de Teléfonos:</span>
+		<input type="tel" placeholder="0">
+	</label>
+
+	<label class="item item-input item-stacked-label ">
+		<span class="input-label">Cantidad de equipos de grabación y reproducción de video:</span>
+		<input type="tel" placeholder="0">
+	</label>
+	<label class="item item-input item-stacked-label ">
+		<span class="input-label">Cantidad de equipos de grabación y reproducción de audio:</span>
+		<input type="tel" placeholder="0">
+	</label>
+</div>
+
+<!--/t2.4 -->
+
+<!-- t2.5 -->
+<div class="card">
+	<div class="item item-text-wrap item-positive">
+		2.5 Salas de Juicio Oral
+	</div>
+</div>
+
+<div class="card" id="2_5">
+	
+	<label class="item item-input item-stacked-label ">
+		<span class="input-label">Cantidad de equipo de computo personal (PC o Laptop):</span>
+		<input type="tel" placeholder="0">
+	</label>
+	<label class="item item-input item-stacked-label ">
+		<span class="input-label">Cantidad de impresoras:</span>
+		<input type="tel" placeholder="0">
+	</label>
+	<label class="item item-input item-stacked-label ">
+		<span class="input-label">Cantidad de scanners:</span>
+		<input type="tel" placeholder="0">
+	</label>
+	<label class="item item-input item-stacked-label ">
+		<span class="input-label">Cantidad de multifuncionales:</span>
+		<input type="tel" placeholder="0">
+	</label>
+	<label class="item item-input item-stacked-label ">
+		<span class="input-label">Cantidad de equipos de grabación y reproducción de audio y video:</span>
+		<input type="tel" placeholder="0">
+	</label>
+	<label class="item item-input item-stacked-label ">
+		<span class="input-label">Capacidad de almacenamiento (Tbytes):</span>
+		<input type="tel" placeholder="0">
+	</label>
+	<label class="item item-input item-stacked-label ">
+		<span class="input-label">Espacio disponible (Tbytes):</span>
+		<input type="tel" placeholder="0">
+	</label>
+	<label class="item item-input item-stacked-label ">
+		<span class="input-label">Crecimiento anual esperado (Tbytes):</span>
+		<input type="tel" placeholder="0">
+	</label>
+</div>
+
+<!--/t2.5 -->
+
+<!-- t3 -->
+<div class="card">
+	<div class="item item-text-wrap item-positive">
+		3 Equipo de Cómputo Central y Comunicaciones
+	</div>
+</div>
+<!--/t3 -->
+
+<!-- t3 -->
+<div class="card" id="3_1">
+	<div class="item item-text-wrap item-stable">
+		3.1 Servidores				
+	</div>
+	<label class="item item-input item-stacked-label ">
+		<span class="input-label">Cantidad de servidores de aplicaciones:</span>
+		<input type="tel" placeholder="0">
+	</label>
+
+	<label class="item item-input item-stacked-label ">
+		<span class="input-label">Número de Procesadores por equipo de la mayoría de los servidores de A.:</span>
+		<input type="tel" placeholder="0">
+	</label>
+	<label class="item item-input item-stacked-label ">
+		<span class="input-label">Memoria por equipo de la mayoría de los servidores de A. (Gbytes):	</span>
+		<input type="tel" placeholder="0">
+	</label>
+	<label class="item item-input item-stacked-label ">
+		<span class="input-label">Capacidad de Disco Duro por equipo de la mayoria de los servidores de A. (Tbytes):</span>
+		<input type="tel" placeholder="0">
+	</label>
+	<label class="item item-input item-stacked-label ">
+		<span class="input-label">Almacenamiento Máximo de la mayoría de los servidores de A. (Tbytes):</span>
+		<input type="tel" placeholder="0">
+	</label>
+
+	<label class="item item-input item-stacked-label ">
+		<span class="input-label">Cantidad de servidores de base de datos:</span>
+		<input type="tel" placeholder="0">
+	</label>
+	<label class="item item-input item-stacked-label ">
+		<span class="input-label">Número de Procesadores por equipo de la mayoría de los servidores de B.D.:</span>
+		<input type="tel" placeholder="0">
+	</label>
+	<label class="item item-input item-stacked-label ">
+		<span class="input-label">Memoria por equipo de la mayoría de los servidores de B.D. (Gbytes):	</span>
+		<input type="tel" placeholder="0">
+	</label>
+	<label class="item item-input item-stacked-label ">
+		<span class="input-label">Capacidad de Disco Duro por equipo de la mayoria de los servidores de B.D. (Tbytes):</span>
+		<input type="tel" placeholder="0">
+	</label>
+	<label class="item item-input item-stacked-label ">
+		<span class="input-label">Almacenamiento Máximo de la mayoría de los servidores de B.D. (Tbytes):</span>
+		<input type="tel" placeholder="0">
+	</label>
+
+	<label class="item item-input item-stacked-label ">
+		<span class="input-label">Cantidad de servidores web:</span>
+		<input type="tel" placeholder="0">
+	</label>
+	<label class="item item-input item-stacked-label ">
+		<span class="input-label">Número de Procesadores por equipo de la mayoría de los servidores de web:</span>
+		<input type="tel" placeholder="0">
+	</label>
+	<label class="item item-input item-stacked-label ">
+		<span class="input-label">Memoria por equipo de la mayoría de los servidores de web (Gbytes):	</span>
+		<input type="tel" placeholder="0">
+	</label>
+	<label class="item item-input item-stacked-label ">
+		<span class="input-label">Capacidad de Disco Duro por equipo de la mayoria de los servidores de web (Tbytes):</span>
+		<input type="tel" placeholder="0">
+	</label>
+	<label class="item item-input item-stacked-label ">
+		<span class="input-label">Almacenamiento Máximo de la mayoría de los servidores de web (Tbytes):</span>
+		<input type="tel" placeholder="0">
+	</label>
+
+</div>
+
+<div class="card" id="3_1_2">
+	
+	<check-list ng-model="lev.comboDispositivosAlmacenamiento" ng-label="'Marcar los Dispositivos de Almacenamiento que se utilizan:'"></check-list>
+
+</div>
+
+
+<div class="card" id="3_1_3">
+
+	<ion-toggle toggle-class="toggle-calm">Servidor de almacenamiento</ion-toggle>
+	<label class="item item-input item-stacked-label ">
+		<span class="input-label">Capacidad de almacenamiento (Tbytes):</span>
+		<input type="tel" placeholder="0">
+	</label>
+	<label class="item item-input item-stacked-label ">
+		<span class="input-label">Espacio disponible (Tbytes):</span>
+		<input type="tel" placeholder="0">
+	</label>
+	<label class="item item-input item-stacked-label ">
+		<span class="input-label">Crecimiento anual esperado (Tbytes):</span>
+		<input type="tel" placeholder="0">
+	</label>
+
+</div>
+
+<div class="card" id="3_1_4">
+
+	<label class="item item-input item-stacked-label ">
+		<span class="input-label">Mencione que Base de Datos se utiliza:</span>
+		<input type="text" placeholder="ej.SQL">
+	</label>
+
+	<label class="item item-input item-stacked-label ">
+		<span class="input-label">Tamaño actual (Tbytes):</span>
+		<input type="tel" placeholder="0">
+	</label>
+	<label class="item item-input item-stacked-label ">
+		<span class="input-label">Espacio disponible (Tbytes):</span>
+		<input type="tel" placeholder="0">
+	</label>
+	<label class="item item-input item-stacked-label ">
+		<span class="input-label">Crecimiento anual esperado (Tbytes):</span>
+		<input type="tel" placeholder="0">
+	</label>
+
+</div>
+
+<!-- sistemas operativos instalados en servidores +1 -->
+<!--/t3 -->
+
+<!-- t3.2 -->
+<div class="card">
+	<div class="item item-text-wrap item-positive">
+		3.2 Seguridad
+	</div>
+</div>
+
+<div class="card" id="3_2_1">
+	
+	<toggle-si-no-combo 
+	ng-model="lev.comboSoftwareSeguridad1" 
+	ng-label="'¿Se cuenta con software antivirus?'"
+	ng-sub-label="'Cuál '"
+	></toggle-si-no-combo>
+
+</div>
+
+<div class="card" id="3_2_2">
+	
+	<toggle-si-no-combo 
+	ng-model="lev.comboSoftwareSeguridad2" 
+	ng-label="'¿Se cuenta con software antimalware?'"
+	ng-sub-label="'Cuál '"
+	></toggle-si-no-combo>
+
+</div>
+
+<div class="card" id="3_2_3">
+	
+	<toggle-si-no-combo 
+	ng-model="lev.comboSoftwareSeguridad3" 
+	ng-label="'¿Se cuenta con software antispyware?'"
+	ng-sub-label="'Cuál '"
+	></toggle-si-no-combo>
+
+</div>
+
+<div class="card" id="3_2_4">
+	
+	<toggle-si-no-combo 
+	ng-model="lev.comboSoftwareSeguridad4" 
+	ng-label="'¿Se cuenta con software de encripción?'"
+	ng-sub-label="'Cuál '"
+	></toggle-si-no-combo>
+
+</div>
+
+<div class="card" id="3_2_5">
+
+	<toggle-si-no-combo 
+	ng-model="lev.comboSoftwareSeguridad5" 
+	ng-label="'¿Se cuenta con software de distribución remota y automática de parches?'"
+	ng-sub-label="'Cuál '"
+	></toggle-si-no-combo>
+
+</div>
+
+<div class="card" id="3_2_6">
+	<label class="item item-input item-stacked-label">
+		<span class="input-label">Tipo de seguridad de acceso a la red corporativa:</span>
+		<input type="text" placeholder="ej.VPN">
+	</label>
+</div>
+
+<!--/t3.2 -->
+
+<!-- t3.3 -->
+<div class="card">
+	<div class="item item-text-wrap item-positive">
+		3.3 Redes y Comunicaciones
+	</div>
+</div>
+
+<div class="card" id="3_3_1">
+	
+	<check-list ng-model="lev.radioDireccionamientoIP" ng-label="'Tipo de Direccionamiento IP:'"></check-list>
+	<div class="item item-divider"></div>
+	<label class="item item-input item-stacked-label ">
+		<span class="input-label">Número de IP's Administradas:</span>
+		<input type="tel" placeholder="0">
+	</label>
+
+</div>
+
+<div class="card" id="3_3_2">
+	<div class="item item-text-wrap item-positive">
+		Switches
+	</div>	
+	<label class="item item-input item-stacked-label ">
+		<span class="input-label">Cantidad:</span>
+		<input type="tel" placeholder="0">
+	</label>
+	<label class="item item-input item-stacked-label ">
+		<span class="input-label">Tipo:</span>
+		<input type="text" placeholder="tipo">
+	</label>
+	<label class="item item-input item-stacked-label ">
+		<span class="input-label">Capacidad:</span>
+		<input type="text" placeholder="capacidad">
+	</label>
+	<label class="item item-input item-stacked-label ">
+		<span class="input-label">% utilizado:</span>
+		<input type="tel" placeholder="0">
+	</label>
+</div>
+
+<div class="card" id="3_3_3">
+	<div class="item item-text-wrap item-positive">
+		Routers
+	</div>	
+	<label class="item item-input item-stacked-label ">
+		<span class="input-label">Cantidad:</span>
+		<input type="tel" placeholder="0">
+	</label>
+	<label class="item item-input item-stacked-label ">
+		<span class="input-label">Tipo:</span>
+		<input type="text" placeholder="tipo">
+	</label>
+	<label class="item item-input item-stacked-label ">
+		<span class="input-label">Capacidad:</span>
+		<input type="text" placeholder="capacidad">
+	</label>
+	<label class="item item-input item-stacked-label ">
+		<span class="input-label">% utilizado:</span>
+		<input type="tel" placeholder="0">
+	</label>
+</div>
+
+<div class="card" id="3_3_4">
+	<div class="item item-text-wrap item-positive">
+		Hubs
+	</div>	
+	<label class="item item-input item-stacked-label ">
+		<span class="input-label">Cantidad:</span>
+		<input type="tel" placeholder="0">
+	</label>
+	<label class="item item-input item-stacked-label ">
+		<span class="input-label">Tipo:</span>
+		<input type="text" placeholder="tipo">
+	</label>
+	<label class="item item-input item-stacked-label ">
+		<span class="input-label">Capacidad:</span>
+		<input type="text" placeholder="capacidad">
+	</label>
+	<label class="item item-input item-stacked-label ">
+		<span class="input-label">% utilizado:</span>
+		<input type="tel" placeholder="0">
+	</label>
+</div>
+
+<div class="card" id="3_3_5">
+	<div class="item item-text-wrap item-positive">
+		Aps
+	</div>	
+	<label class="item item-input item-stacked-label ">
+		<span class="input-label">Cantidad:</span>
+		<input type="tel" placeholder="0">
+	</label>
+	<label class="item item-input item-stacked-label ">
+		<span class="input-label">Tipo:</span>
+		<input type="text" placeholder="tipo">
+	</label>
+	<label class="item item-input item-stacked-label ">
+		<span class="input-label">Capacidad:</span>
+		<input type="text" placeholder="capacidad">
+	</label>
+	<label class="item item-input item-stacked-label ">
+		<span class="input-label">% utilizado:</span>
+		<input type="tel" placeholder="0">
+	</label>
+</div>
+
+<div class="card" id="3_3_5">
+	<div class="item item-text-wrap item-positive">
+		Firewall
+	</div>	
+	<label class="item item-input item-stacked-label ">
+		<span class="input-label">Cantidad:</span>
+		<input type="tel" placeholder="0">
+	</label>
+	<label class="item item-input item-stacked-label ">
+		<span class="input-label">Tipo:</span>
+		<input type="text" placeholder="tipo">
+	</label>
+	<label class="item item-input item-stacked-label ">
+		<span class="input-label">Capacidad:</span>
+		<input type="text" placeholder="capacidad">
+	</label>
+	<label class="item item-input item-stacked-label ">
+		<span class="input-label">% utilizado:</span>
+		<input type="tel" placeholder="0">
+	</label>
+</div>
+
+<div class="card" id="3_3_6">
+	<div class="list">		
+		<combo-item ng-model="lev.comboSoftwareSeguridad" ng-label="'¿Que software de Firewall utiliza?:'"></combo-item>
+	</div>
+	<ion-toggle toggle-class="toggle-calm">¿El cableado cuenta con alguna Certificación?</ion-toggle>
+	<label class="item item-input item-stacked-label ">
+		<span class="input-label">¿Que certificación tiene el cableado?:</span>
+		<input type="text" placeholder="certificación">
+	</label>
+	<label class="item item-input item-stacked-label ">
+		<span class="input-label">¿Que categoría es el cableado?:</span>
+		<input type="text" placeholder="categoría">
+	</label>
+	<ion-toggle toggle-class="toggle-calm">¿La instalación eléctrica cuenta tierra física?</ion-toggle>
+	<ion-toggle toggle-class="toggle-calm">¿Cuenta con servicio de internet?</ion-toggle>
+	<label class="item item-input item-stacked-label ">
+		<span class="input-label">Ancho de Banda:</span>
+		<input type="text" placeholder="ancho de banda">
+	</label>
+	<div class="list">		
+		<combo-item ng-model="lev.comboDesicionTipo1" ng-label="'¿Se cuenta con plataforma de Videoconferencia? (NO SKYPE o similar):'"></combo-item>
+	</div>
+</div>
+
+<div class="card" id="3_3_7">
+	<div class="item item-text-wrap item-stable">
+		¿Se cuenta con algún sistema de localización satelital para notificadores, peritos o personal de servicios previos al juicio?
+	</div>
+	<div class="list">		
+		<combo-item ng-model="lev.comboDesicionTipo1" ng-label="'Seleccione una opción:'"></combo-item>
+	</div>
+	<label class="item item-input item-stacked-label ">
+		<span class="input-label">¿Cual?:</span>
+		<input type="text" placeholder="cual">
+	</label>
+	<ion-toggle toggle-class="toggle-calm">¿Se cuenta con alguna interconexión con otras Instituciones del NSJP?</ion-toggle>
+</div>
+
+<!-- Mencione las Instituciones con las cuales existe la interconexión:												 +1 -->
+<div class="card" id="3_3_8">
+	<label class="item item-input item-stacked-label ">
+		<span class="input-label">Mencione el tipo de seguridad<br/> de acceso en las interconexiones con otras Instituciones:</span>
+		<input type="text" placeholder="tipo de seguridad de acceso">
+	</label>
+</div>
+
+<div class="card" id="3_3_9">
+	<div class="item item-text-wrap item-stable">¿Para la Red Local (LAN) cuenta con red inalámbrica?
+	</div>
+	<div class="list">		
+		<combo-item ng-model="lev.comboDesicionTipo1" ng-label="'Seleccione una opción:'"></combo-item>
+	</div>
+</div>
+
+
+<!--/t3.3 -->
+
+<!-- t4 -->
+<div class="card">
+	<div class="item item-text-wrap item-positive">
+		4 Sistemas de Gestión
+	</div>
+</div>
+<!-- t4.1 -->
+<div class="card" id="3_1">
+	<div class="item item-text-wrap item-stable">
+		4.1 Sistema de Gestión Externo				
+	</div>
+	<div class="list">		
+		<combo-item ng-model="lev.comboDesicionTipo1" ng-label="'¿Se cuenta con algún Sistema de Gestión?:'"></combo-item>
+	</div>
+	<label class="item item-input item-stacked-label ">
+		<span class="input-label">¿Cual?:</span>
+		<input type="text" placeholder="cual">
+	</label>
+	<div class="list">		
+		<combo-item ng-model="lev.comboSistemaGestion" ng-label="'El Sistema de Gestión es:'"></combo-item>
+	</div>
+	<label class="item item-input item-stacked-label ">
+		<span class="input-label">Mencione cuál es el nombre del Sistema de Gestión:</span>
+		<input type="text" placeholder="sistema de gestión">
+	</label>
+	<label class="item item-input item-stacked-label ">
+		<span class="input-label">Cantidad  de usuarios que utilizan el Sistema de Gestión:</span>
+		<input type="text" placeholder="cantidad  de usuarios que utilizan sistema de gestión">
+	</label>
+	<!-- Mencione que áreas son las principales usuarias del Sistema de Gestión:												+1 -->
+	<label class="item item-input item-stacked-label ">
+		<span class="input-label">¿Quien es el administrador del Sistema de Gestión?:</span>
+		<input type="text" placeholder="cual">
+	</label>
+	<div class="list">		
+		<combo-item ng-model="lev.comboArqSistemaGestion" ng-label="'¿Qué tipo de arquitectura tiene el Sistema de Gestión?:'"></combo-item>
+	</div>
+	<ion-toggle toggle-class="toggle-calm">El Sistema de Gestión tiene interoperabilidad con algún sistema de otra Institución?</ion-toggle>
+	<label class="item item-input item-stacked-label ">
+		<span class="input-label">¿Con cual sistema tiene interoperabilidad?:</span>
+		<input type="text" placeholder="cual sistema">
+	</label>
+	<label class="item item-input item-stacked-label ">
+		<span class="input-label">¿De que Dependencia o Institución?:</span>
+		<input type="text" placeholder="dependencia">
+	</label>
+	<ion-toggle toggle-class="toggle-calm">En el Sistema de Gestión ¿Se lleva el control del Expediente Único de Causa?</ion-toggle>
+
+	<!--
+	4.2 Aplicaciones Institucionales	+1											
+												
+	Mencione cuales son las principales aplicaciones institucionales que se utilizan para la operación:												
+	1.- Sistema de Registro de Detenidos												
+	2.-												
+	3.-												
+	4.-												
+	5.-												
+													
+	Mencione cuales son las aplicaciones que se han recibido en donación y que se utilizan para la operación:												
+	1.-												
+	2.-												
+	3.-												
+	4.-												
+	5.-												 
+-->
+
+
+
+</div>
+<!--/t4.1 -->
+
+<!--/t4 -->
+
+<!-- t4.3 -->
+<div class="card" id="4_3">
+	<div class="item item-text-wrap item-positive">
+		4.3 Otros
+	</div>
+</div>
+
+<div class="card" id="4_3_1">
+	<div class="item item-stable">¿El equipamiento de TIC está conforme a lo requerido por el NSJP?:</div>
+	<div class="list">		
+		<combo-item ng-model="lev.comboDesicionTipo1" ng-label="'Equipamiento conforme...'"></combo-item>
+	</div>
+
+	<div class="list">		
+		<combo-item ng-model="lev.comboSistemaGestion" ng-label="'El Sistema de Gestión es:'"></combo-item>
+	</div>
+	<ion-toggle toggle-class="toggle-calm">¿Se ha efectuado algún proyecto de TIC relacionado con la implementación del NSJP?</ion-toggle>
+	<label class="item item-input item-stacked-label ">
+		<span class="input-label">Monto de la inversión ejercida (M.N. antes de IVA):</span>
+		<input type="text" placeholder="monto inversión">
+	</label>
+	<div class="list">		
+		<combo-item ng-model="lev.comboFuenteRecursos" ng-label="'Fuente de los recursos:'"></combo-item>
+	</div>
+	<ion-toggle toggle-class="toggle-calm">¿Se notificó y/o sometió a validación por parte de la SETEC?</ion-toggle>
+</div>
+<!--/t4.3 -->
+
+<!-- t5 -->
+<div class="card" id="4_3">
+	<div class="item item-text-wrap item-positive">
+		5 Comentarios al cuestionario
+	</div>
+</div>
+
+<div class="card" id="4_3_1">
+	<label class="item item-input">
+	<textarea placeholder="Commentarios" rows="7"></textarea>
+	</label>
+</div>
+<!--7t5 -->
+
+<pre>{{lev | json }}</pre>
+
+</ion-content>
+</ion-view>
