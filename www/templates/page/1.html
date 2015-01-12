@@ -1,28 +1,28 @@
 <ion-view view-title="LEVANTAMIENTO TICS">
-<ion-content class"padding">
+<ion-content class"padding" ng-model="lv.Levantamientos.Levantamiento">
 <div class="card main-card" id="1">
 	<div class="item item-text-wrap item-stable">
 		<p><strong class="setecmaintitle">Datos generales</strong></p>
 		<hr color="#c9c9c9" />
 		<p class="setecsub">Levantamiento de TIC's</p>
-		<p>Formato: <span>FOR-LEV-TIC-2014			</span></p>
-		<p>No. de Registro: <span>301930001_PJ-21</span></p>
+		<p>Formato: <span>{{gen.Formato}}</span></p>
+		<p>No. de Registro: <span>{{gen.NumRegistro}}</span></p>
 		<hr color="#c9c9c9" />
-		<p class="setecsub">Institución o Unidad que ocupa el inmueble: <br/><span>Poder Judicial de la Defensoria del Estado de Xalapa</span></p>
+		<p class="setecsub">Institución o Unidad que ocupa el inmueble: <br/><span>{{gen.Institucion}}</span></p>
 		<hr color="#c9c9c9" />
-		<p class="setecsub">Estado: <span>Veracruz</span>, Municipio: <span>Xalapa</span></p>
+		<p class="setecsub">Estado: <span>{{gen.Estado}}</span>, Municipio: <span>{{gen.Municipio}}</span></p>
 		<hr color="#c9c9c9" />	
 		<p class="setecsub">Dirección</p>
-		<p>Calle: <span>Calle</span></p>
-		<p>Colonia: <span>Colonia</span></p>
-		<p>Localidad: <span>Localidad</span></p>
-		<p>No. ext.: <span>1</span></p>
-		<p>No. int.: <span>-</span></p>
-		<p>C.P.: <span>550000</span></p>
+		<p>Calle: <span>{{gen.Calle}}</span></p>
+		<p>Colonia: <span>{{gen.Colonia}}</span></p>
+		<p>Localidad: <span>{{gen.Localidad}}</span></p>
+		<p>No. ext.: <span>{{gen.NumExt}}</span></p>
+		<p>No. int.: <span>{{gen.NumInt}}</span></p>
+		<p>C.P.: <span>{{gen.CP}}</span></p>
 		<hr color="#c9c9c9" />
 		<p class="setecsub">Georeferencia</p>
-		<p>Lat: <span>46'03'50</span></p>
-		<p>Lng.: <span>12'10'06</span></p>
+		<p>Lat: <span>{{gen.Lat_grados}}º{{gen.Lat_min}}'{{gen.Lat_seg}}</span></p>
+		<p>Lng.: <span>{{gen.Lng_grados}}º{{gen.Lng_min}}'{{gen.Lng_seg}}</span></p>
 	</div>	  
 </div>
 <!-- t21 -->
@@ -38,13 +38,13 @@
 </div>
 <!--/t2 -->
 <!-- t2.1 -->
-<div class="card" id="2_1">
+<div class="card" id="2_1" ng-model="lv">
 	<div class="item item-text-wrap item-stable">
 		2.1 Equipo de Cómputo Personal
 	</div>	
 	<label class="item item-input item-stacked-label">
 		<span class="input-label">Cantidad de Personal TI en sitio:</span>
-		<input type="tel" placeholder="0">
+		<input type="tel" placeholder="0" ng-model="ecp.CantidadPersonalTI" >
 	</label>
 	<div class="list">		
 		<combo-item ng-model="lev.combo1" ng-label="'El Equipo de Cómputo se sustituye cada:'"></combo-item>
@@ -54,51 +54,57 @@
 	</div>
 	<label class="item item-input item-stacked-label">
 		<span class="input-label">Cantidad de Usuarios (Personal Sustantivo) sin Equipo de Cómputo:</span>
-		<input type="tel" placeholder="0">
+		<input type="tel" placeholder="0" ng-model="ecp.UsuariosSinPC">
 	</label>
 	<label class="item item-input item-stacked-label ">
 		<span class="input-label">Cantidad de Computadoras de Escritorio de la Institución en este inmueble:</span>
-		<input type="tel" placeholder="0">
+		<input type="tel" placeholder="0" ng-model="ecp.CantidadEscritorio">
 	</label>
 	<label class="item item-input item-stacked-label ()GHz">
-		<span class="input-label">Tipo de Procesador de la mayoría de las C. de Escritorio ()GB:</span>
-		<input type="tel" placeholder="0">
+		<span class="input-label">Tipo de Procesador de la mayoría de las C. de Escritorio:</span>
+		<input type="text" placeholder="0" ng-model="ecp.FK_IdTipoProcesador_Alias_Escritorio__TICS" />
 	</label>
 	<label class="item item-input item-stacked-label ">
 		<span class="input-label">Memoria RAM de la mayoría de las C. de Escritorio (GB):</span>
-		<input type="tel" placeholder="0">
+		<input type="text" placeholder="0" ng-model="ecp.FK_IdTipoRAM_Alias_Escritorio__TICS">
 	</label>
 	<label class="item item-input item-stacked-label ">
 		<span class="input-label">Capacidad de Disco Duro de la mayoría de las C. de Escritorio (GB):</span>
-		<input type="tel" placeholder="0">
+		<input type="text" placeholder="0" ng-model="ecp.FK_IdTipoDiscoDuro_Alias_Escritorio__TICS" />
 	</label>
 	
 	<label class="item item-input item-stacked-label ">
 		<span class="input-label">Cantidad de Laptops de la Institución en este inmueble:</span>
-		<input type="tel" placeholder="0">
+		<input type="tel" placeholder="0" ng-model="ecp.CantidadLaptops" />
 	</label>
 	<label class="item item-input item-stacked-label ()GHz">
 		<span class="input-label">Tipo de Procesador de la mayoría de las Laptops:</span>
-		<input type="text" placeholder="0">
+		<input type="text" placeholder="0" ng-model="ecp.FK_IdTipoProcesador_Alias_Laptops__TICS" />			
 	</label>
 	<label class="item item-input item-stacked-label ()GHz">
 		<span class="input-label">Tipo de Procesador de la mayoría de las Laptops:</span>
-		<input type="text" placeholder="0">
+		<input type="text" placeholder="0" ng-model="ecp.FK_IdTipoProcesador_Alias_Laptops__TICS" />
 	</label>
 	<label class="item item-input item-stacked-label ()GHz">
 		<span class="input-label">Memoria RAM de la mayoría de las Laptops:</span>
-		<input type="text" placeholder="0">
+		<input type="text" placeholder="0" ng-model="ecp.FK_IdTipoRAM_Alias_Laptops__TICS" />
 	</label>
 	<!-- SO instalados +1 -->
 	<!-- soft. oficina +1 -->
 	<!-- soft. comercial +1 -->
 	<label class="item item-input item-stacked-label ">
 		<span class="input-label">Cantidad de Laptops de la Institución en este inmueble:</span>
-		<input type="tel" placeholder="0">
+		<input type="tel" placeholder="0" ng-model="ecp.CantidadLaptops" />
 	</label>
+
+	<label class="item item-input item-stacked-label ">
+		<span class="input-label">Cantidad de Tablets:</span>
+		<input type="tel" placeholder="0" ng-model="ecp.CatidadTablets" />
+	</label>
+
 	<label class="item item-input item-stacked-label ">
 		<span class="input-label">Cantidad de equipos MAC:</span>
-		<input type="tel" placeholder="0">
+		<input type="tel" placeholder="0" ng-model="ecp.CantidadEquiposMac" />
 	</label>
 </div>
 <!--/t2.1 -->
@@ -114,7 +120,7 @@
 	
 	<label class="item item-input item-stacked-label ">
 		<span class="input-label">Cantidad de impresoras láser B/N:</span>
-		<input type="tel" placeholder="0">
+		<input type="tel" placeholder="0" ng-model="per.ImpresorasLaserBNCantidad" />
 	</label>
 	
 	<toggle-si-no ng-status="lev.capacidadRedImpLsrBN" ng-value="lev.capacidadRedImpLsrBNValue" ng-label="'Capacidad de Red'" ng-sublabel="'Cuantas'"></toggle-si-no>
@@ -122,33 +128,26 @@
 	<div class="item item-divider"></div>
 	<label class="item item-input item-stacked-label ">
 		<span class="input-label">Cantidad de impresoras láser color:</span>
-		<input type="tel" placeholder="0">
+		<input type="tel" placeholder="0" ng-model="per.ImpresorasLaserColorCapRedCuantas" />
 	</label>
 	<toggle-si-no ng-status="lev.capacidadRedImpLsrClr" ng-value="lev.capacidadRedImpLsrClrValue" ng-label="'Capacidad de Red'" ng-sublabel="'Cuantas'"></toggle-si-no>
 	<div class="item item-divider"></div>
-	<label class="item item-input item-stacked-label ">
-		<span class="input-label">Cantidad de impresoras láser color:</span>
-		<input type="tel" placeholder="0">
-	</label>
+	
 	<label class="item item-input item-stacked-label ">
 		<span class="input-label">Cantidad de scanners/Digitalizadores:</span>
-		<input type="tel" placeholder="0">
+		<input type="tel" placeholder="0" ng-model="per.CantidadScanners" />
 	</label>
 	<label class="item item-input item-stacked-label ">
 		<span class="input-label">Cantidad de no-breaks:</span>
-		<input type="tel" placeholder="0">
-	</label>
-	<label class="item item-input item-stacked-label ">
-		<span class="input-label">Cantidad de no-breaks:</span>
-		<input type="tel" placeholder="0">
+		<input type="tel" placeholder="0" ng-model="per.CantidadNoBreaks" />
 	</label>
 	<label class="item item-input item-stacked-label ">
 		<span class="input-label">Cantidad de lectores de codigo de barras:</span>
-		<input type="tel" placeholder="0">
+		<input type="tel" placeholder="0" ng-model="per.CantidadLectoresCodeBar" />
 	</label>
 	<label class="item item-input item-stacked-label ">
 		<span class="input-label">Cantidad de multifuncionales:</span>
-		<input type="tel" placeholder="0">
+		<input type="tel" placeholder="0" ng-model="per.MultifuncionalesCantidad" />
 	</label>
 
 	<toggle-si-no ng-status="lev.capacidadRedMulti" ng-value="lev.capacidadRedMultiValue" ng-label="'Capacidad de Red'" ng-sublabel="'Cuantos'"></toggle-si-no>
@@ -156,26 +155,26 @@
 	<div class="item item-divider"></div>
 	<label class="item item-input item-stacked-label ">
 		<span class="input-label">Cantidad de kioskos electrónicos de información:</span>
-		<input type="tel" placeholder="0">
+		<input type="tel" placeholder="0" ng-model="per.CantidadKioscos" />
 	</label>
 	<div class="list">		
 		<combo-item ng-model="lev.comboTelefonicaFija" ng-label="'Telefonía fija:'"></combo-item>
 	</div>
 	<label class="item item-input item-stacked-label ">
 		<span class="input-label">Cantidad de lineas PBX:</span>
-		<input type="tel" placeholder="0">
+		<input type="tel" placeholder="0" ng-model="per.TelefoniaTI.CantidadLineas" />
 	</label>
 	<label class="item item-input item-stacked-label ">
 		<span class="input-label">Cantidad de lineas VoIP:</span>
-		<input type="tel" placeholder="0">
+		<input type="tel" placeholder="0" ng-model="per.TelefoniaTI.CantidadLineas" />
 	</label>
 	<label class="item item-input item-stacked-label ">
 		<span class="input-label">Cantidad de extensiones PBX:</span>
-		<input type="tel" placeholder="0">
+		<input type="tel" placeholder="0" ng-model="per.TelefoniaTI.CantidadExt" />
 	</label>
 	<label class="item item-input item-stacked-label ">
 		<span class="input-label">Cantidad de extensiones VoIP:</span>
-		<input type="tel" placeholder="0">
+		<input type="tel" placeholder="0" ng-model="per.TelefoniaTI.CantidadExt" />
 	</label>
 	<div class="list">		
 		<combo-item ng-model="lev.comboSistemaRadioFrecuencia" ng-label="'Sistema de Radio Frecuencia:'"></combo-item>
@@ -183,7 +182,7 @@
 	<ion-toggle toggle-class="toggle-calm">Se cuenta con equipo de radiocomunicación</ion-toggle>
 	<label class="item item-input item-stacked-label ">
 		<span class="input-label">Capacidad (mts):</span>
-		<input type="tel" placeholder="0">
+		<input type="tel" placeholder="0" ng-model="per.CantidadEquipoRadio" />
 	</label>
 </div>
 
@@ -200,23 +199,23 @@
 	
 	<label class="item item-input item-stacked-label ">
 		<span class="input-label">Cantidad de equipo de computo personal (PC o Laptop):</span>
-		<input type="tel" placeholder="0">
+		<input type="tel" placeholder="0" ng-model="boev.BodegaLaptops" />
 	</label>
 	<label class="item item-input item-stacked-label ">
 		<span class="input-label">Cantidad de impresoras láser color:</span>
-		<input type="tel" placeholder="0">
+		<input type="tel" placeholder="0" ng-model="boev.BodegaImpresoras" />
 	</label>
 	<label class="item item-input item-stacked-label ">
 		<span class="input-label">Cantidad de scanners:</span>
-		<input type="tel" placeholder="0">
+		<input type="tel" placeholder="0" ng-model="boev.BodegaScanners" />
 	</label>
 	<label class="item item-input item-stacked-label ">
 		<span class="input-label">Cantidad de multifuncionales:</span>
-		<input type="tel" placeholder="0">
+		<input type="tel" placeholder="0" ng-model="boev.BodegaMultifuncionales" />
 	</label>
 	<label class="item item-input item-stacked-label ">
 		<span class="input-label">Cantidad de Teléfonos:</span>
-		<input type="tel" placeholder="0">
+		<input type="tel" placeholder="0" ng-model="boev.BodegaTelefonos" />
 	</label>
 </div>
 
@@ -233,32 +232,32 @@
 	
 	<label class="item item-input item-stacked-label ">
 		<span class="input-label">Cantidad de equipo de computo personal (PC o Laptop):</span>
-		<input type="tel" placeholder="0">
+		<input type="tel" placeholder="0" ng-model="sepe.PericialesPCLaptops" />
 	</label>
 	<label class="item item-input item-stacked-label ">
-		<span class="input-label">Cantidad de impresoras:</span>
-		<input type="tel" placeholder="0">
+		<span class="input-label">Cantidad de impresoras láser color:</span>
+		<input type="tel" placeholder="0" ng-model="sepe.PericialesImpresoras" />
 	</label>
 	<label class="item item-input item-stacked-label ">
 		<span class="input-label">Cantidad de scanners:</span>
-		<input type="tel" placeholder="0">
+		<input type="tel" placeholder="0" ng-model="sepe.PericialesScanners" />
 	</label>
 	<label class="item item-input item-stacked-label ">
 		<span class="input-label">Cantidad de multifuncionales:</span>
-		<input type="tel" placeholder="0">
+		<input type="tel" placeholder="0" ng-model="sepe.PericialesMultifuncionales" />
 	</label>
 	<label class="item item-input item-stacked-label ">
 		<span class="input-label">Cantidad de Teléfonos:</span>
-		<input type="tel" placeholder="0">
+		<input type="tel" placeholder="0" ng-model="sepe.PericialesTelefonos" />
 	</label>
 
 	<label class="item item-input item-stacked-label ">
 		<span class="input-label">Cantidad de equipos de grabación y reproducción de video:</span>
-		<input type="tel" placeholder="0">
+		<input type="tel" placeholder="0" ng-model="sepe.PericialesVideo" />
 	</label>
 	<label class="item item-input item-stacked-label ">
 		<span class="input-label">Cantidad de equipos de grabación y reproducción de audio:</span>
-		<input type="tel" placeholder="0">
+		<input type="tel" placeholder="0" ng-model="sepe.PericialesAudio" />
 	</label>
 </div>
 
@@ -275,35 +274,35 @@
 	
 	<label class="item item-input item-stacked-label ">
 		<span class="input-label">Cantidad de equipo de computo personal (PC o Laptop):</span>
-		<input type="tel" placeholder="0">
+		<input type="tel" placeholder="0" ng-model="saju.JuiciosPCLaptops" />
 	</label>
 	<label class="item item-input item-stacked-label ">
 		<span class="input-label">Cantidad de impresoras:</span>
-		<input type="tel" placeholder="0">
+		<input type="tel" placeholder="0" ng-model="saju.JuiciosImpresoras" />
 	</label>
 	<label class="item item-input item-stacked-label ">
 		<span class="input-label">Cantidad de scanners:</span>
-		<input type="tel" placeholder="0">
+		<input type="tel" placeholder="0" ng-model="saju.JuiciosScanners" />
 	</label>
 	<label class="item item-input item-stacked-label ">
 		<span class="input-label">Cantidad de multifuncionales:</span>
-		<input type="tel" placeholder="0">
+		<input type="tel" placeholder="0" ng-model="saju.JuiciosMultifuncionales" />
 	</label>
 	<label class="item item-input item-stacked-label ">
 		<span class="input-label">Cantidad de equipos de grabación y reproducción de audio y video:</span>
-		<input type="tel" placeholder="0">
+		<input type="tel" placeholder="0" ng-model="saju.JuiciosVideo" />
 	</label>
 	<label class="item item-input item-stacked-label ">
 		<span class="input-label">Capacidad de almacenamiento (Tbytes):</span>
-		<input type="tel" placeholder="0">
+		<input type="tel" placeholder="0" ng-model="saju.JuiciosServidoresAlmacenamiento" />
 	</label>
 	<label class="item item-input item-stacked-label ">
 		<span class="input-label">Espacio disponible (Tbytes):</span>
-		<input type="tel" placeholder="0">
+		<input type="tel" placeholder="0" ng-model="saju.JuiciosServidoresDisponible" />
 	</label>
 	<label class="item item-input item-stacked-label ">
 		<span class="input-label">Crecimiento anual esperado (Tbytes):</span>
-		<input type="tel" placeholder="0">
+		<input type="tel" placeholder="0" ng-model="saju.JuiciosServidoresCrecimiento" />
 	</label>
 </div>
 
@@ -324,66 +323,66 @@
 	</div>
 	<label class="item item-input item-stacked-label ">
 		<span class="input-label">Cantidad de servidores de aplicaciones:</span>
-		<input type="tel" placeholder="0">
+		<input type="tel" placeholder="0" ng-model="serv.ServidoresAplicaciones" />
 	</label>
 
 	<label class="item item-input item-stacked-label ">
 		<span class="input-label">Número de Procesadores por equipo de la mayoría de los servidores de A.:</span>
-		<input type="tel" placeholder="0">
+		<input type="tel" placeholder="0" ng-model="serv.SAProcesadores" />
 	</label>
 	<label class="item item-input item-stacked-label ">
 		<span class="input-label">Memoria por equipo de la mayoría de los servidores de A. (Gbytes):	</span>
-		<input type="tel" placeholder="0">
+		<input type="tel" placeholder="0" ng-model="serv.SAMemoriaRAM" />
 	</label>
 	<label class="item item-input item-stacked-label ">
 		<span class="input-label">Capacidad de Disco Duro por equipo de la mayoria de los servidores de A. (Tbytes):</span>
-		<input type="tel" placeholder="0">
+		<input type="tel" placeholder="0" ng-model="serv.SACapacidad" />
 	</label>
 	<label class="item item-input item-stacked-label ">
 		<span class="input-label">Almacenamiento Máximo de la mayoría de los servidores de A. (Tbytes):</span>
-		<input type="tel" placeholder="0">
+		<input type="tel" placeholder="0" ng-model="serv.SAAlmacenamientoMaximo" />
 	</label>
 
 	<label class="item item-input item-stacked-label ">
 		<span class="input-label">Cantidad de servidores de base de datos:</span>
-		<input type="tel" placeholder="0">
+		<input type="tel" placeholder="0" ng-model="serv.ServidoresDataBase" />
 	</label>
 	<label class="item item-input item-stacked-label ">
 		<span class="input-label">Número de Procesadores por equipo de la mayoría de los servidores de B.D.:</span>
-		<input type="tel" placeholder="0">
+		<input type="tel" placeholder="0" ng-model="serv.DBProcesadores" />
 	</label>
 	<label class="item item-input item-stacked-label ">
 		<span class="input-label">Memoria por equipo de la mayoría de los servidores de B.D. (Gbytes):	</span>
-		<input type="tel" placeholder="0">
+		<input type="tel" placeholder="0" ng-model="serv.DBMemoriaRAM" />
 	</label>
 	<label class="item item-input item-stacked-label ">
 		<span class="input-label">Capacidad de Disco Duro por equipo de la mayoria de los servidores de B.D. (Tbytes):</span>
-		<input type="tel" placeholder="0">
+		<input type="tel" placeholder="0" ng-model="serv.DBMemoriaRAM" />
 	</label>
 	<label class="item item-input item-stacked-label ">
 		<span class="input-label">Almacenamiento Máximo de la mayoría de los servidores de B.D. (Tbytes):</span>
-		<input type="tel" placeholder="0">
+		<input type="tel" placeholder="0" ng-model="serv.DBCapacidad" />
 	</label>
 
 	<label class="item item-input item-stacked-label ">
 		<span class="input-label">Cantidad de servidores web:</span>
-		<input type="tel" placeholder="0">
+		<input type="tel" placeholder="0" ng-model="serv.ServidoresWEB" />
 	</label>
 	<label class="item item-input item-stacked-label ">
 		<span class="input-label">Número de Procesadores por equipo de la mayoría de los servidores de web:</span>
-		<input type="tel" placeholder="0">
+		<input type="tel" placeholder="0" ng-model="serv.WEBProcesadores" />
 	</label>
 	<label class="item item-input item-stacked-label ">
 		<span class="input-label">Memoria por equipo de la mayoría de los servidores de web (Gbytes):	</span>
-		<input type="tel" placeholder="0">
+		<input type="tel" placeholder="0" ng-model="serv.WEBMemoriaRAM" />
 	</label>
 	<label class="item item-input item-stacked-label ">
 		<span class="input-label">Capacidad de Disco Duro por equipo de la mayoria de los servidores de web (Tbytes):</span>
-		<input type="tel" placeholder="0">
+		<input type="tel" placeholder="0" ng-model="serv.WEBCapacidad" />
 	</label>
 	<label class="item item-input item-stacked-label ">
 		<span class="input-label">Almacenamiento Máximo de la mayoría de los servidores de web (Tbytes):</span>
-		<input type="tel" placeholder="0">
+		<input type="tel" placeholder="0" ng-model="serv.WEBAlmacenamientoMaximo" />
 	</label>
 
 </div>
@@ -400,15 +399,15 @@
 	<ion-toggle toggle-class="toggle-calm">Servidor de almacenamiento</ion-toggle>
 	<label class="item item-input item-stacked-label ">
 		<span class="input-label">Capacidad de almacenamiento (Tbytes):</span>
-		<input type="tel" placeholder="0">
+		<input type="tel" placeholder="0" ng-model="serv.ServidorAlmacenamiento[0].Capacidad" />
 	</label>
 	<label class="item item-input item-stacked-label ">
 		<span class="input-label">Espacio disponible (Tbytes):</span>
-		<input type="tel" placeholder="0">
+		<input type="tel" placeholder="0" ng-model="serv.ServidorAlmacenamiento[0].EspacioDisponible" />
 	</label>
 	<label class="item item-input item-stacked-label ">
 		<span class="input-label">Crecimiento anual esperado (Tbytes):</span>
-		<input type="tel" placeholder="0">
+		<input type="tel" placeholder="0" ng-model="serv.ServidorAlmacenamiento[0].CrecimientoAnual" />
 	</label>
 
 </div>
@@ -417,20 +416,20 @@
 
 	<label class="item item-input item-stacked-label ">
 		<span class="input-label">Mencione que Base de Datos se utiliza:</span>
-		<input type="text" placeholder="ej.SQL">
+		<input type="text" placeholder="ej.SQL" ng-model="ecp.ServidorDataBase[0].FK_IdTipoDataBase__TICS" >
 	</label>
 
 	<label class="item item-input item-stacked-label ">
 		<span class="input-label">Tamaño actual (Tbytes):</span>
-		<input type="tel" placeholder="0">
+		<input type="tel" placeholder="0" ng-model="ecp.ServidorDataBase[0].TamanioActual" />
 	</label>
 	<label class="item item-input item-stacked-label ">
 		<span class="input-label">Espacio disponible (Tbytes):</span>
-		<input type="tel" placeholder="0">
+		<input type="tel" placeholder="0" ng-model="ecp.ServidorDataBase[0].EspacioDisponible" />
 	</label>
 	<label class="item item-input item-stacked-label ">
 		<span class="input-label">Crecimiento anual esperado (Tbytes):</span>
-		<input type="tel" placeholder="0">
+		<input type="tel" placeholder="0" ng-model="ecp.ServidorDataBase[0].CrecimientoAnual" />
 	</label>
 
 </div>
@@ -517,7 +516,7 @@
 	<div class="item item-divider"></div>
 	<label class="item item-input item-stacked-label ">
 		<span class="input-label">Número de IP's Administradas:</span>
-		<input type="tel" placeholder="0">
+		<input type="tel" placeholder="0" ng-model="ecp.CantidadEquiposMac" />
 	</label>
 
 </div>
@@ -528,7 +527,7 @@
 	</div>	
 	<label class="item item-input item-stacked-label ">
 		<span class="input-label">Cantidad:</span>
-		<input type="tel" placeholder="0">
+		<input type="tel" placeholder="0" ng-model="ecp.CantidadEquiposMac" />
 	</label>
 	<label class="item item-input item-stacked-label ">
 		<span class="input-label">Tipo:</span>
@@ -540,7 +539,7 @@
 	</label>
 	<label class="item item-input item-stacked-label ">
 		<span class="input-label">% utilizado:</span>
-		<input type="tel" placeholder="0">
+		<input type="tel" placeholder="0" ng-model="ecp.CantidadEquiposMac" />
 	</label>
 </div>
 
@@ -550,7 +549,7 @@
 	</div>	
 	<label class="item item-input item-stacked-label ">
 		<span class="input-label">Cantidad:</span>
-		<input type="tel" placeholder="0">
+		<input type="tel" placeholder="0" ng-model="ecp.CantidadEquiposMac" />
 	</label>
 	<label class="item item-input item-stacked-label ">
 		<span class="input-label">Tipo:</span>
@@ -562,7 +561,7 @@
 	</label>
 	<label class="item item-input item-stacked-label ">
 		<span class="input-label">% utilizado:</span>
-		<input type="tel" placeholder="0">
+		<input type="tel" placeholder="0" ng-model="ecp.CantidadEquiposMac" />
 	</label>
 </div>
 
@@ -572,7 +571,7 @@
 	</div>	
 	<label class="item item-input item-stacked-label ">
 		<span class="input-label">Cantidad:</span>
-		<input type="tel" placeholder="0">
+		<input type="tel" placeholder="0" ng-model="ecp.CantidadEquiposMac" />
 	</label>
 	<label class="item item-input item-stacked-label ">
 		<span class="input-label">Tipo:</span>
@@ -584,7 +583,7 @@
 	</label>
 	<label class="item item-input item-stacked-label ">
 		<span class="input-label">% utilizado:</span>
-		<input type="tel" placeholder="0">
+		<input type="tel" placeholder="0" ng-model="ecp.CantidadEquiposMac" />
 	</label>
 </div>
 
@@ -594,7 +593,7 @@
 	</div>	
 	<label class="item item-input item-stacked-label ">
 		<span class="input-label">Cantidad:</span>
-		<input type="tel" placeholder="0">
+		<input type="tel" placeholder="0" ng-model="ecp.CantidadEquiposMac" />
 	</label>
 	<label class="item item-input item-stacked-label ">
 		<span class="input-label">Tipo:</span>
@@ -606,7 +605,7 @@
 	</label>
 	<label class="item item-input item-stacked-label ">
 		<span class="input-label">% utilizado:</span>
-		<input type="tel" placeholder="0">
+		<input type="tel" placeholder="0" ng-model="ecp.CantidadEquiposMac" />
 	</label>
 </div>
 
@@ -616,7 +615,7 @@
 	</div>	
 	<label class="item item-input item-stacked-label ">
 		<span class="input-label">Cantidad:</span>
-		<input type="tel" placeholder="0">
+		<input type="tel" placeholder="0" ng-model="ecp.CantidadEquiposMac" />
 	</label>
 	<label class="item item-input item-stacked-label ">
 		<span class="input-label">Tipo:</span>
@@ -628,7 +627,7 @@
 	</label>
 	<label class="item item-input item-stacked-label ">
 		<span class="input-label">% utilizado:</span>
-		<input type="tel" placeholder="0">
+		<input type="tel" placeholder="0" ng-model="ecp.CantidadEquiposMac" />
 	</label>
 </div>
 
@@ -804,7 +803,7 @@
 </div>
 <!--7t5 -->
 
-<pre>{{lev | json }}</pre>
+<!--<pre>{{lev | json }}</pre>-->
 
 </ion-content>
 </ion-view>
